@@ -1,6 +1,9 @@
 {
   "name": "burrito-love",
   "main": "app.js",
+  "scripts": {
+    "start": "nodemon app.js"
+  },
   "dependencies": {
     "async": "~0.2.9",
     "bcrypt-nodejs": "latest",
