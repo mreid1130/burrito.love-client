@@ -1,27 +1,17 @@
 {
-  "name": "burrito-love",
+  "name": "burritoLove",
+  "version": "0.0.0",
+  "description": "Burrito Love",
   "main": "app.js",
   "scripts": {
-    "start": "nodemon app.js"
+    "start": "node app.js"
   },
   "dependencies": {
-    "async": "~0.2.9",
-    "bcrypt-nodejs": "latest",
-    "body-parser": "~1.4.2",
-    "connect-flash": "~0.1.1",
-    "cookie-parser": "~1.0.1",
-    "ejs": "~0.8.5",
-    "express": "~4.5.1",
-    "express-session": "^1.11.1",
-    "method-override": "~2.0.2",
-    "morgan": "~1.0.0",
-    "mongoose": "~3.8.0",
-    "async": "*",
-    "cheerio": "*",
-    "request": "*"
+    "ejs": "2.3.3",
+    "express": "4.13.3"
   },
   "engines": {
-    "node": "~0.10.37",
-    "npm": "~1.3.10"
-  }
+    "node": "0.12.7"
+  },
+  "license": "MIT"
 }
