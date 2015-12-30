@@ -84,9 +84,14 @@ body {
 
 .game_container #field,
 .game_container #gameboard {
-    margin-top: 10px;
+    margin-top: 100px;
     left: 50%;
     transform: translateX(-50%);
+}
+
+.nav-title {
+    text-decoration: none;
+    color: #333;
 }
 
 .cbp-af-header {
@@ -162,6 +167,10 @@ body {
 
 .cbp-af-header.cbp-af-header-shrink {
     height: 90px;
+}
+
+.cbp-af-header.cbp-af-header-shrink.static {
+    position: absolute;
 }
 
 .cbp-af-header.cbp-af-header-shrink h1,
