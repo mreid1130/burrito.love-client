@@ -90,8 +90,7 @@ $(document).ready(function() {
       var signup = function() {
         return $.ajax({
           type: "POST",
-          // url: 'https://salty-reaches-7186.herokuapp.com/signup',
-          url: 'http://localhost:8080/signup',
+          url: 'https://salty-reaches-7186.herokuapp.com/signup',
           data: data
         });
       };
@@ -130,8 +129,7 @@ $(document).ready(function() {
       var login = function() {
         return $.ajax({
           type: "POST",
-          // url: 'https://salty-reaches-7186.herokuapp.com/login',
-          url: 'http://localhost:8080/login',
+          url: 'https://salty-reaches-7186.herokuapp.com/login',
           data: data
         });
       };
