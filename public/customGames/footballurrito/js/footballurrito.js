@@ -47,17 +47,18 @@ FootballGame.prototype = {
         opponent.destroy();
       } else if (player.hit(opponent)) {
         if (player.height >= opponent.height) {
-          opponent.tackled()
+          opponent.tackled();
           opponentsTackled += 1
+          player.grow();
           setTimeout(function() {
-            opponent.destroy()
-            opponent.down = true
+            opponent.destroy();
+            opponent.down = true;
           }, 250)
         } else {
-          player.tackled()
-          player.down = true
+          player.tackled();
+          player.down = true;
           setTimeout(function() {
-            player.destroy()
+            player.destroy();
           }, 250)
         }
       } else {

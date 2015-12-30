@@ -30,34 +30,34 @@ Player.prototype = {
   },
 
   move: function() {
-    oldX = this.x
-    oldY = this.y
+    oldX = this.x;
+    oldY = this.y;
 
     switch (this.dir) {
       case 'right':
         this.x += this.speed;
-        this.$player.css('background-image', "url('/customGames/footballurrito/img/playerright.gif')")
+        this.$player.css('background-image', "url('/customGames/footballurrito/img/playerright.gif')");
         break;
       case 'left':
         this.x -= this.speed;
-        this.$player.css('background-image', "url('/customGames/footballurrito/img/playerleft.gif')")
+        this.$player.css('background-image', "url('/customGames/footballurrito/img/playerleft.gif')");
         break;
       case 'up':
         this.y -= this.speed;
-        this.$player.css('background-image', "url('/customGames/footballurrito/img/playerup.gif')")
+        this.$player.css('background-image', "url('/customGames/footballurrito/img/playerup.gif')");
         break;
       case 'down':
         this.y += this.speed;
-        this.$player.css('background-image', "url('/customGames/footballurrito/img/playerdown.gif')")
+        this.$player.css('background-image', "url('/customGames/footballurrito/img/playerdown.gif')");
         break;
     }
 
     if (!this.inbounds()) {
       if (this.x > this.width / 2 || this.x < this.$gameboard.width() - this.width / 2) {
-        this.x = oldX
+        this.x = oldX;
       }
       if (this.y > this.height / 2 || this.y < this.$gameboard.height() - this.height / 2) {
-        this.y = oldY
+        this.y = oldY;
       }
     }
 
@@ -77,13 +77,13 @@ Player.prototype = {
   },
 
   tackled: function() {
-    this.$player.css('background-image', "url('/customGames/footballurrito/img/tackledplayer.png')")
-    this.down = true
+    this.$player.css('background-image', "url('/customGames/footballurrito/img/tackledplayer.png')");
+    this.down = true;
   },
 
   grow: function() {
-    this.height += 1
-    this.width += 1
+    this.height += 1;
+    this.width += 1;
   },
 
   destroy: function() {
