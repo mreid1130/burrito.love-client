@@ -17,6 +17,7 @@ $(window).ready(function() {
             time: game.score,
             burritosEaten: game.burritosEaten,
             opponentsTackled: game.opponentsTackled,
+            jwt: localStorage.jwt || ''
           }
         })
         $('#field').remove() // removed the gameboard (and thus all HTML elements)

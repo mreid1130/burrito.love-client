@@ -6,9 +6,11 @@
     <script src="js/vendor/jquery-2.1.4.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/classie/1.0.1/classie.min.js"></script>
     <!-- Normalizing CSS -->
+    <link rel="stylesheet" href="css/auth.css">
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/application.css">
     <script src="js/animatedHeader.js"></script>
+    <script src="js/base.js"></script>
     <title>BurritoLove</title>
 </head>
 
@@ -20,17 +22,85 @@
                 <nav>
                     <a href="/fallspace">FallSpace</a>
                     <a href="/footballurrito">Footballurrito</a>
+                    <a class='home-play-button' href="#play-container">Play</a>
+                    <a class='home-login-button' href="#login-signup">Login/Signup</a>
                 </nav>
             </div>
         </div>
-        <div class='left-vertical'>
-            <div class='cn'>
-                <a class='inner' href="/fallspace"><img class='home-image' src="http://static1.squarespace.com/static/50c25455e4b0ef5720704c6b/54b94ba5e4b0b5bb4be6a892/54b94d72e4b0c2c1fae545b6/1421430256503/Spaceship.png"></a>
+        <div name='login-signup' class='login-signup-container'>
+            <div class="form">
+                <ul class="tab-group">
+                    <li class="tab active"><a href="#signup">Sign Up</a></li>
+                    <li class="tab"><a href="#login">Log In</a></li>
+                </ul>
+                <div class="tab-content">
+                    <div id="signup">
+                        <h1>Sign Up for Free</h1>
+                        <form action="/" method="post">
+                            <div class="top-row">
+                                <div class="field-wrap">
+                                    <label>
+                                        First Name<span class="req">*</span>
+                                    </label>
+                                    <input class='signup-first-name' type="text" required autocomplete="off" />
+                                </div>
+                                <div class="field-wrap">
+                                    <label>
+                                        Last Name<span class="req">*</span>
+                                    </label>
+                                    <input class='signup-last-name' type="text" required autocomplete="off" />
+                                </div>
+                            </div>
+                            <div class="field-wrap">
+                                <label>
+                                    Email Address<span class="req">*</span>
+                                </label>
+                                <input class='signup-email' type="email" required autocomplete="off" />
+                            </div>
+                            <div class="field-wrap">
+                                <label>
+                                    Set A Password<span class="req">*</span>
+                                </label>
+                                <input class='signup-password' type="password" required autocomplete="off" />
+                            </div>
+                            <button type="submit" class="button button-block signup" />Get Started</button>
+                        </form>
+                    </div>
+                    <div id="login">
+                        <h1>Welcome Back!</h1>
+                        <form action="/" method="post">
+                            <div class="field-wrap">
+                                <label>
+                                    Email Address<span class="req">*</span>
+                                </label>
+                                <input class='login-email' type="email" required autocomplete="off" />
+                            </div>
+                            <div class="field-wrap">
+                                <label>
+                                    Password<span class="req">*</span>
+                                </label>
+                                <input class='login-password' type="password" required autocomplete="off" />
+                            </div>
+                            <button class="button button-block login" />Log In</button>
+                        </form>
+                    </div>
+                </div>
+                <!-- tab-content -->
             </div>
+            <!-- /form -->
         </div>
-        <div class='right-vertical'>
-            <div class='cn'>
-                <a class='inner' href="/footballurrito"><img class='home-image' src="http://www.chipotle.co.uk/Content/Images/menu/burrito2x.png"></a>
+        <div name='play-container' class='play-container'>
+            <div class='left-vertical'>
+                <div class='cn'>
+                    <a class='inner' href="/fallspace"><img class='home-image' src="http://static1.squarespace.com/static/50c25455e4b0ef5720704c6b/54b94ba5e4b0b5bb4be6a892/54b94d72e4b0c2c1fae545b6/1421430256503/Spaceship.png"></a>
+                </div>
+                <h2 class='game-title'>FallSpace</h2>
+            </div>
+            <div class='right-vertical'>
+                <div class='cn'>
+                    <a class='inner' href="/footballurrito"><img class='home-image' src="http://www.chipotle.co.uk/Content/Images/menu/burrito2x.png"></a>
+                </div>
+                <h2 class='game-title'>Footballurrito</h2>
             </div>
         </div>
     </div>

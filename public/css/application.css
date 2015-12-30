@@ -35,13 +35,24 @@ body {
     width: 300px;
 }
 
+.play-container {
+    position: relative;
+    top: 47em;
+    height: 400px;
+}
+
+.login-signup-container {
+    position: relative;
+    top: 22em;
+    height: 400px;
+}
+
 .left-vertical {
     display: inline-block;
     float: left;
     height: 100%;
     width: 50%;
     position: relative;
-    margin-top: 25%;
 }
 
 .right-vertical {
@@ -50,7 +61,12 @@ body {
     height: 100%;
     width: 50%;
     position: relative;
-    margin-top: 25%;
+}
+
+.game-title {
+    margin-bottom: 50px;
+    text-align: center;
+    color: #aaa;
 }
 
 #wrapper {

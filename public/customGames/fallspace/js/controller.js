@@ -19,7 +19,8 @@ $(document).ready(function() {
             time: game.score,
             shipsDestroyed: game.enemyKills,
             asteroidsDestroyed: game.asteroidKills,
-            wallsDestroyed: game.wallKills
+            wallsDestroyed: game.wallKills,
+            jwt: localStorage.jwt || ''
           }
         })
 
