@@ -10,6 +10,10 @@ $(document).ready(function() {
       $('.login-signup-container').css('display', '');
       $('.home-logout').remove();
       $('.cbp-af-inner nav').append('<a class="home-login-button" href="#login-signup">Login/Signup</a>');
+      var scroll = $('.login-signup-container').offset().top - 95 // adjust for header
+      $(document.body).animate({
+        'scrollTop': scroll
+      }, 900);
       $('.home-login-button').on('click', function(e) {
         e.preventDefault();
         var scroll = $('.login-signup-container').offset().top - 95 // adjust for header
@@ -105,6 +109,9 @@ $(document).ready(function() {
           $('.play-container').animate({
             'top': '22em'
           }, 800);
+          $('label').each(function(index) {
+            $(this).removeClass('active');
+          })
           $('.cbp-af-inner nav').append('<a class="home-logout" >Logout</a>');
           $('.signup-first-name').val('');
           $('.signup-last-name').val('');
@@ -143,6 +150,9 @@ $(document).ready(function() {
           $('.play-container').animate({
             'top': '22em'
           }, 800);
+          $('label').each(function(index) {
+            $(this).removeClass('active');
+          })
           $('.cbp-af-inner nav').append('<a class="home-logout" href="#">Logout</a>');
           logoutHandler();
           $('.login-email').val('');
