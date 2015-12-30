@@ -37,7 +37,7 @@ FootballGame.prototype = {
         burritosEaten += 1;
         burrito.eaten = true;
         burrito.destroy();
-        player.grow();
+        player.grow(2);
       }
       burrito.decay();
     });
@@ -49,7 +49,7 @@ FootballGame.prototype = {
         if (player.height >= opponent.height) {
           opponent.tackled();
           opponentsTackled += 1;
-          player.grow();
+          player.grow(1);
           setTimeout(function() {
             opponent.destroy();
             opponent.down = true;

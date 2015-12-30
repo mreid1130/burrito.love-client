@@ -78,9 +78,9 @@ Player.prototype = {
     this.down = true;
   },
 
-  grow: function() {
-    this.height += 1;
-    this.width += 1;
+  grow: function(n) {
+    this.height += n;
+    this.width += n;
   },
 
   destroy: function() {
