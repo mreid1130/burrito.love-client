@@ -1,0 +1,49 @@
+#sidebar {
+    width: 15%;
+    height: 650px;
+    display: inline-block;
+    float: left;
+    background-color: black;
+    border: 2px black solid;
+    text-align: center;
+}
+
+.avatar {
+    border-radius: 100%;
+    border: 2px red solid;
+}
+
+.sidebar-head {
+    color: white;
+}
+
+.sidebar-button {
+    color: white;
+    text-decoration: none;
+}
+
+.sidebar-button:hover {
+    color: red;
+}
+
+.leaderboard_container {
+    display: inline-block;
+}
+
+.profile_container {
+    display: inline-block;
+}
+
+.ranking_container {
+    display: inline-block;
+}
+
+.sidebar-text {
+    color: white;
+}
+
+
+/*
+#login {
+	color:white;
+}*/

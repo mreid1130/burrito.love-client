@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Vendor Scripts -->
+    <script src="js/vendor/mousetrap.js"></script>
+    <script src="js/vendor/underscore.js"></script>
+    <script src="js/vendor/jquery-2.1.4.min.js"></script>
+    <!-- Normalizing CSS -->
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/application.css">
+    <!-- Footballurrito CSS -->
+    <link rel="stylesheet" href="customGames/footballurrito/css/application.css">
+    <!-- Footballurrito JS Files -->
+    <script src="customGames/footballurrito/js/player.js"></script>
+    <script src="customGames/footballurrito/js/opponent.js"></script>
+    <script src="customGames/footballurrito/js/footballurrito.js"></script>
+    <script src="customGames/footballurrito/js/burrito.js"></script>
+    <script src="customGames/footballurrito/js/application.js"></script>
+    <title>Footballurrito</title>
+</head>
+
+<body>
+    <div class="game_container">
+        <!-- <div class='game-overlay'></div> -->
+        <div id="field">
+            <div class='game-overlay'>
+                <div id='start'></div>
+            </div>
+        </div>
+    </div>
+    <div id='scoreboard'>
+        <h3>-- Scoreboard --</h3>
+        <p>Current Score: <span id="footballtimer">0</span></p>
+        <p>Burritos Eaten: <span id="burritosEaten">0</span></p>
+        <p>Opponents Tackled: <span id="opponentsTackled">0</span></p>
+    </div>
+</body>
+
+</html>

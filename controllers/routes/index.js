@@ -1,5 +1,12 @@
+var path = require('path');
 module.exports = function(app) {
-  app.get('*', function(req, res) {
-    res.render('index.ejs');
+  app.get('/', function(req, res) {
+    res.sendFile(path.join(__dirname, '../../public/views/base.html'));
   });
+  app.get('/fallspace', function(req, res) {
+    res.sendFile(path.join(__dirname, '../../public/customGames/fallspace/views/fallspace.html'));
+  })
+  app.get('/footballurrito', function(req, res) {
+    res.sendFile(path.join(__dirname, '../../public/customGames/footballurrito/views/footballurrito.html'));
+  })
 };
