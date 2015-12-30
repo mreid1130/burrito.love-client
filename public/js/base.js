@@ -9,7 +9,14 @@ $(document).ready(function() {
       }, 800);
       $('.login-signup-container').css('display', '');
       $('.home-logout').remove();
-      $('.cbp-af-inner nav').append('<a class="home-login-button" href="#login-signup">Login/Signup</a>')
+      $('.cbp-af-inner nav').append('<a class="home-login-button" href="#login-signup">Login/Signup</a>');
+      $('.home-login-button').on('click', function(e) {
+        e.preventDefault();
+        var scroll = $('.login-signup-container').offset().top - 95 // adjust for header
+        $(document.body).animate({
+          'scrollTop': scroll
+        }, 900);
+      });
     })
   }
 
