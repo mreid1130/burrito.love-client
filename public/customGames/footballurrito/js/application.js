@@ -7,7 +7,7 @@ $(window).ready(function() {
         game.loop();
       } else {
 
-        clearInterval(footballurritoloop)
+        clearInterval(footballurritoloop);
 
         $.ajax({
           type: 'POST',
@@ -39,16 +39,16 @@ $(window).ready(function() {
         if (e.preventDefault) {
           e.preventDefault();
         }
-        game.player.dir = direction
-        game.player.movement = 4
+        game.player.dir = direction;
+        game.player.movement = 4;
       }, 'keydown');
 
       Mousetrap.bind(direction, function(e) {
         if (e.preventDefault) {
           e.preventDefault();
         }
-        game.player.dir = 'none'
-        game.player.movement = 0
+        game.player.dir = 'none';
+        game.player.movement = 0;
         game.player.$player.css('background-image', "url('/customGames/footballurrito/img/standingplayer.png')")
       }, 'keyup');
     })

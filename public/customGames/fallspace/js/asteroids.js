@@ -15,9 +15,9 @@ Asteroid.prototype = {
   },
 
   initDisplay: function() {
-    this.$meteor = $("<div class='asteroid'></div>")
+    this.$meteor = $("<div class='asteroid'></div>");
     $('#gameboard').append(this.$meteor);
-    this.updateDisplay()
+    this.updateDisplay();
   },
 
   move: function() {
@@ -28,16 +28,16 @@ Asteroid.prototype = {
     this.y += ymove
 
     if (!this.inbounds()) {
-      this.$meteor.css('display', 'none')
-      this.$meteor.remove()
-      this.outOfBounds = true
+      this.$meteor.css('display', 'none');
+      this.$meteor.remove();
+      this.outOfBounds = true;
     }
 
     this.updateDisplay();
   },
 
   inbounds: function() {
-    return this.x > this.width / 2 && this.x < this.$gameboard.width() && this.y > this.height / 2 && this.y < this.$gameboard.height()
+    return this.x > this.width / 2 && this.x < this.$gameboard.width() && this.y > this.height / 2 && this.y < this.$gameboard.height();
   },
 
   hit: function(shot) {
@@ -48,17 +48,15 @@ Asteroid.prototype = {
   },
 
   explode: function() {
-    meteor = this.$meteor
-    this.$meteor.css('background-image', "url('/customGames/fallspace/img/explosion.png')")
-    this.strike = true
+    meteor = this.$meteor;
+    this.$meteor.css('background-image', "url('/customGames/fallspace/img/explosion.png')");
+    this.strike = true;
     setTimeout(function() {
       meteor.remove();
     }, 250)
   },
 
-  touchingLeft: function(player) {},
-
   destroy: function() {
-    this.$meteor.remove()
+    this.$meteor.remove();
   }
 }

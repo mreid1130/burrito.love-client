@@ -17,10 +17,10 @@ badGuy.prototype = {
   },
 
   initDisplay: function() {
-    this.$enemy = $("<div class='badguy'></div>")
+    this.$enemy = $("<div class='badguy'></div>");
     $('#gameboard').append(this.$enemy);
 
-    this.updateDisplay()
+    this.updateDisplay();
   },
 
   move: function() {

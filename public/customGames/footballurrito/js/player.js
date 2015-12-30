@@ -1,12 +1,9 @@
 function Player(gameboard) {
-  this.$gameboard = gameboard
-  console.log(gameboard);
+  this.$gameboard = gameboard;
   this.x = this.$gameboard.width() / 2;
   this.y = this.$gameboard.height() / 2;
-  console.log(this.$gameboard.height());
-  console.log(this.$gameboard.width());
-  this.height = 20
-  this.width = 20
+  this.height = 20;
+  this.width = 20;
   this.speed = 4;
   this.dir = "none";
   this.initDisplay();
@@ -15,11 +12,11 @@ function Player(gameboard) {
 Player.prototype = {
 
   updateDisplay: function() {
-    this.$player.css('top', this.y - this.height / 2)
-    this.$player.css('left', this.x - this.width / 2)
-    this.$player.css('height', this.height)
-    this.$player.css('width', this.width)
-    this.$player.css('background-size', this.height + 'px ' + this.width + 'px')
+    this.$player.css('top', this.y - this.height / 2);
+    this.$player.css('left', this.x - this.width / 2);
+    this.$player.css('height', this.height);
+    this.$player.css('width', this.width);
+    this.$player.css('background-size', this.height + 'px ' + this.width + 'px');
   },
 
   initDisplay: function() {
