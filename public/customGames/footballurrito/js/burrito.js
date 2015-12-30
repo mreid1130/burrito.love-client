@@ -5,7 +5,7 @@ function Burrito(gameboard) {
   this.x = Math.floor(Math.random() * this.$gameboard.width());
   this.y = Math.floor(Math.random() * this.$gameboard.height());
   this.initDisplay();
-  this.lifespan = Math.floor(Math.random() * 10000) + 5000;
+  this.lifespan = Math.floor(Math.random() * 8000) + 2000;
   this.created = new Date().getTime();
 }
 
