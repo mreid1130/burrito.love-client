@@ -34,7 +34,7 @@ $(document).ready(function() {
         scrollBar.scrollTop(chatContainer.scrollHeight);
 
       } else {
-        console.log("Problem getting message", data);
+        console.log("Problem getting message", message);
       }
 
     };
