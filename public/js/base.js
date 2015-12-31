@@ -82,14 +82,14 @@ $(document).ready(function() {
   $('.signup').on('click', function(e) {
     e.preventDefault();
     if (!$('.signup-first-name').val() || !$('.signup-last-name').val() || !$('.signup-email').val() || !$('.signup-password').val()) {
-      console.log('sup')
+      console.log('need more data');
     } else {
       var data = {
         firstName: $('.signup-first-name').val(),
         lastName: $('.signup-last-name').val(),
         email: $('.signup-email').val(),
         password: $('.signup-password').val()
-      }
+      };
 
       var signup = function() {
         return $.ajax({
@@ -122,7 +122,7 @@ $(document).ready(function() {
 
     }
 
-  })
+  });
 
   $('.login').on('click', function(e) {
     e.preventDefault();
@@ -132,7 +132,7 @@ $(document).ready(function() {
       var data = {
         email: $('.login-email').val(),
         password: $('.login-password').val()
-      }
+      };
       var login = function() {
         return $.ajax({
           type: "POST",
@@ -174,7 +174,7 @@ $(document).ready(function() {
 
   $('.home-login-button').on('click', function(e) {
     e.preventDefault();
-    var scroll = $('.login-signup-container').offset().top - 95 // adjust for header
+    var scroll = $('.login-signup-container').offset().top - 95; // adjust for header
     $(document.body).animate({
       'scrollTop': scroll
     }, 900);
