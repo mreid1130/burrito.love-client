@@ -10,8 +10,6 @@ $(document).ready(function() {
 
   socket.onopen = function() {
 
-    socket.send('test');
-
     socket.onmessage = function(message) {
       try {
         console.log(message.data);

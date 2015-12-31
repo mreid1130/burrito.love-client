@@ -21,8 +21,8 @@ $(document).ready(function() {
           'scrollTop': scroll
         }, 900);
       });
-    })
-  }
+    });
+  };
 
   if (localStorage.user && localStorage.jwt) {
     $('.home-login-button').remove();
@@ -111,7 +111,7 @@ $(document).ready(function() {
           }, 800);
           $('label').each(function(index) {
             $(this).removeClass('active');
-          })
+          });
           $('.cbp-af-inner nav').append('<a class="home-logout" >Logout</a>');
           $('.signup-first-name').val('');
           $('.signup-last-name').val('');
@@ -152,7 +152,7 @@ $(document).ready(function() {
           }, 800);
           $('label').each(function(index) {
             $(this).removeClass('active');
-          })
+          });
           $('.cbp-af-inner nav').append('<a class="home-logout" href="#">Logout</a>');
           logoutHandler();
           $('.login-email').val('');
@@ -161,11 +161,11 @@ $(document).ready(function() {
       });
 
     }
-  })
+  });
 
   $('.home-play-button').on('click', function(e) {
     e.preventDefault();
-    var scroll = $('.play-container').offset().top - 95 // adjust for header
+    var scroll = $('.play-container').offset().top - 95; // adjust for header
     $(document.body).animate({
       'scrollTop': scroll
     }, 900);
