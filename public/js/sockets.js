@@ -1,7 +1,7 @@
 $(document).ready(function() {
 
   var messages = [];
-  var socket = new WebSocket('ws://localhost:8080');
+  var socket = new WebSocket('ws://salty-reaches-7186.herokuapp.com');
   var chatBox = $("#chatBox");
   var name = $("#name");
   var message = $("#message");
