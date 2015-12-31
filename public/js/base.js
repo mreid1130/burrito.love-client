@@ -1,5 +1,4 @@
 $(document).ready(function() {
-
   var logoutHandler = function() {
     $('.home-logout').on('click', function(e) {
       e.preventDefault();
@@ -10,13 +9,13 @@ $(document).ready(function() {
       $('.login-signup-container').css('display', '');
       $('.home-logout').remove();
       $('.cbp-af-inner nav').append('<a class="home-login-button" href="#login-signup">Login/Signup</a>');
-      var scroll = $('.login-signup-container').offset().top - 95 // adjust for header
+      var scroll = $('.login-signup-container').offset().top - 95; // adjust for header
       $(document.body).animate({
         'scrollTop': scroll
       }, 900);
       $('.home-login-button').on('click', function(e) {
         e.preventDefault();
-        var scroll = $('.login-signup-container').offset().top - 95 // adjust for header
+        var scroll = $('.login-signup-container').offset().top - 95; // adjust for header
         $(document.body).animate({
           'scrollTop': scroll
         }, 900);
@@ -24,15 +23,25 @@ $(document).ready(function() {
     });
   };
 
+  var scroll;
   if (localStorage.user && localStorage.jwt) {
     $('.home-login-button').remove();
     $('.login-signup-container').css('display', 'none');
     $('.play-container').animate({
-      'top': '22em'
+      'top': '32em'
     }, 500);
+    scroll = $('.play-container').offset().top - 95; // adjust for header
+    $(document.body).animate({
+      'scrollTop': scroll
+    }, 1500);
     $('.cbp-af-inner nav').append('<a class="home-logout" href="#login-signup">Logout</a>');
     logoutHandler();
   } else {
+    scroll = $('.login-signup-container').offset().top - 95; // adjust for header
+
+    $(document.body).animate({
+      'scrollTop': scroll
+    }, 1500);
     localStorage.clear();
   }
 
