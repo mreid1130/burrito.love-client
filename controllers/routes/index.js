@@ -3,6 +3,9 @@ module.exports = function(app) {
   app.get('/', function(req, res) {
     res.sendFile(path.join(__dirname, '../../public/views/base.html'));
   });
+  app.get('/chat', function(req, res) {
+    res.sendFile(path.join(__dirname, '../../public/views/chat.html'));
+  })
   app.get('/fallspace', function(req, res) {
     res.sendFile(path.join(__dirname, '../../public/customGames/fallspace/views/fallspace.html'));
   })

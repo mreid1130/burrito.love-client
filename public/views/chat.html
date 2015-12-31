@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script>
+    if (!localStorage.user || !localStorage.jwt) {
+        window.location = '/'
+    }
+    </script>
+    <!-- Vendor Scripts -->
+    <script src="js/vendor/jquery-2.1.4.min.js"></script>
+    <!-- Normalizing CSS -->
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/chat.css">
+    <script src="socket.io/socket.io.js"></script>
+    <script src="js/sockets.js"></script>
+    <title>BurritoLove</title>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div id="chat-container" class="chat-container">
+            <ul id="chatBox"></ul>
+        </div>
+        <div class="message-container">
+            <form action="">
+                <input id="name" placeholder="Username"></input>
+                <input id="message" autocomplete="off" placeholder="..." />
+                <button id="send">Send</button>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>
